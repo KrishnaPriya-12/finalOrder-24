@@ -1,0 +1,73 @@
+<table style="width:100%; height:100%">
+    <tr>
+        <td style="width: 20%; background-color: rgb(244, 221, 226);">
+
+<table>
+    <tr>
+        <td> Enter  Product Id </td>
+        <td> <input type="text" #productId/> </td>
+    </tr>
+    <tr>
+        <td> Enter  Product Name </td>
+        <td> <input type="text" #productName/> </td>
+    </tr>
+    <tr>
+        <td> Height </td>
+        <td> <input type="text" #height/> </td>
+    </tr>
+    <tr>
+        <td>Category</td>
+        <td> 
+            <select #category>
+                <option> Plant </option>
+                <option> Seed </option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Bloom Season</td>
+        <td> 
+            <select #bloomSeason>
+                <option> Summer </option>
+                <option> Winter </option>
+                <option> Spring </option>
+                
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td> Price </td>
+        <td> <input type="text" #price/> </td>
+    </tr>
+    <tr>
+        <td> Discount </td>
+        <td> <input type="text" #discount/> </td>
+    </tr>
+    <tr>
+        <td> Planter Description </td>
+        <td> <input type="text" #about/> </td>
+    </tr>
+
+    <tr>
+        <td> Image Name </td>
+        <td> <input type="text" #image/> </td>
+    </tr>
+        <tr>
+            <td> Star Rating </td>
+            <td> <input type="text" #starRating/> </td>
+        </tr>
+        <tr>
+        <td> <input type="reset" vaule="Clear All"></td>
+        <td> <input type="button" 
+            (click)="readPlanter(productId.value,productName.value,height.value,category.value,bloomSeason.value,price.value,discount.value,about.value,image.value,starRating.value)"
+            value="Add Product" /> </td>
+    </tr> 
+
+</table>
+<br/>
+
+</td>
+
+</tr>
+</table>
+

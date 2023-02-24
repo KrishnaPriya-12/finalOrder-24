@@ -1,0 +1,15 @@
+ from Local Storage<hr><br>
+    <div><i>Product Id :- </i> {{productId}}</div>
+    <div><i>Product Name :- </i>{{productName}}</div>
+    <div> <i>Product Height :- </i>{{height}}</div>
+    <div><i>Category :- </i> {{category}}</div>
+    <div><i>Bloom Season :-</i>{{bloomSeason}}</div>
+    <div><i>About :- </i> {{about}}</div>
+    <div> <i>Price :- </i>{{price}}</div>
+    <div><i>Star Rating :- </i>{{starRating}}</div>
+    
+
+    <br>
+    <button value="{{productId}}" (click)="goForBuy(product.value)" #product> Buy Product </button>
+    <button>Add Review</button> 
+

@@ -1,0 +1,64 @@
+<table style="width: 100%; height: 5%;">
+  <tr>
+    <td style="width: 10%;"> <img src="/assets/images/newtitle.jpg" width="100px" height="100px"> </td>
+    <td style="width: 70%;"> <span style="font-size: 70px; color: rgb(6, 72, 47);font-family: Georgia, 'Times New Roman', Times, serif ;margin-left: 20%; "><i>Online Plant App</i></span> </td>
+    <td style="width: 20%;background-color: rgb(103, 160, 108); ">
+      <div *ngIf="loginStatus == false">
+        <table style="width: 100%; height: 100%;">
+          <tr><input type="text" placeholder="username" #username/></tr>
+          <tr><input type="password" placeholder="password" #password/> </tr>
+          <tr>
+             <button (click)="verifyUser(username.value,password.value)"> Login</button> 
+            <button> Register </button>
+          </tr>
+        </table>
+      </div>
+
+      <div *ngIf="loginStatus == true">
+          <table>
+            <tr>
+              <td> <img src="/assets/images/{{photo}}" width="65px" height="65px"> </td>
+              <td> 
+                   Welcome <b> {{loginUsername}} </b> as <i> {{userRole}} with {{loginCustomerId}} </i> 
+                   <br/>
+                   <a href="#"> profile </a>
+                   <a href="#" (click)="doLogout()" style="margin-left: 20px;"> logout </a>
+                   
+              </td>
+            </tr>
+          </table>
+         
+    
+      </div>
+
+    </td>
+  </tr>
+</table>
+<hr class="line"/>
+<table style="width: 100%; height: 30%;" *ngIf="loginStatus == true">
+  <tr *ngIf="(userRole == 'admin')">
+    
+    <td class="link"> <a   routerLink="/about">About</a> </td>
+    <td class="link"> <a   routerLink="/products">All products</a> </td>
+    <td class="link"> <a   routerLink="/launchproduct"> Add Product </a>   </td>
+    <td class="link"> <a   routerLink="/orderList"> All Orders </a>   </td>
+    <td class="link"> <a   routerLink="/orderListOnCategory" > All Orders on Category </a>   </td>
+    
+  </tr>
+  <tr *ngIf="(userRole == 'Customer')">
+    
+    <td class="link"> <a   routerLink="/about">About</a> </td>
+    <td class="link"> <a   routerLink="/products">All products</a> </td>
+    <td class="link"> <a   routerLink="/order"> My Order </a>   </td>
+    
+  </tr>
+</table>
+<hr class="line2" *ngIf="loginStatus == true"/>
+<div *ngIf="loginStatus == false">
+<img width="100%" src="/assets/images/final.jpg"/> 
+</div>
+<div *ngIf="loginStatus == true">
+  <router-outlet></router-outlet>
+</div>
+
+     

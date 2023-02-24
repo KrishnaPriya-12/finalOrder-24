@@ -1,0 +1,12 @@
+
+<div *ngFor="let o of allOrders">
+    Order Id :- <b>{{o.bookingOrderId}}</b><br>
+    <div> order total cost {{o.totalCost}} delivered within {{o.orderDate}} </div><br>
+    Transaction Mode:- <b>{{o.transactionMode}}</b><br>
+    Quantity :- <b>{{o.quantity}}</b><br/>
+    Customer Id:- <b> {{o.customerId}}</b><br>
+    Product Id:- <b> {{o.productId}}</b><br>
+    Category:- <b> {{o.category}}</b>
+
+    <hr>
+</div>
